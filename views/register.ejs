@@ -1,0 +1,196 @@
+<<% include ./partial/header %>
+<div class="lop"style="border:1px solid pink;">
+    <% if (locals.errors) { %>
+      <div class="alert alert-danger" role="alert"style="">
+        <% locals.errors.forEach(function(errors) { %>
+        <h5><%= errors.msg %></h5>
+        <% }); %>
+      </div>
+      <% } %>
+</div>
+
+
+
+<div
+  class="container"
+  style=" position: relative;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px 0 30px 0;
+margin:80px auto;margin-top:160px;
+width: 34%;
+"
+
+>
+
+        
+
+        <form action="/student/register" method="POST" style="margin: 30px auto; width:600px;  ">
+          <div class="row">
+            <div class="col">
+              <h2 style="text-align: center;letter-spacing: 2px;font-weight: bold;margin-bottom:30px; margin-right: 120px;">
+                REGISTER
+              </h2>
+ 
+              <!-- type -->
+              <div id="rates" class="form-group"style="width: 450px;
+              display: inline-block;
+              text-align: left;
+              ">
+                <input type="radio" id="r1" name="type" value="student" style="margin-left:80px;" />
+                Employee
+               
+                <input type="radio" id="r3" name="type" value="warden" style="margin-left:30px;" />
+                Manager
+              </div>
+
+              <div class="form-group form-inline">
+                <label for="name" style="width: 200px;
+                display: inline-block;
+                text-align: left;
+                ">Name</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="name"
+                  placeholder="name"
+                  name="name"
+                  style="float: left;
+                  text-align: left;
+                 width: 170px;
+                  "
+                />
+              </div>
+
+              <!-- id -->
+              <div class="form-group form-inline">
+                  <label for="username" style="width: 200px;
+                  display: inline-block;
+                  text-align: left;
+                  ">Username</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="username"
+                  placeholder="username"
+                  name="username"
+                  style="width: 170px;"
+                />
+              </div>
+              <!-- password -->
+              <div class="form-group form-inline">
+                  <label for="password"style="width: 200px;
+                  display: inline-block;
+                  text-align: left;
+                  ">Password</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="password"
+                  style="width: 170px;"
+                  
+                />
+              </div>
+              <!-- confirm password -->
+              <div class="form-group form-inline">
+                  <label for="cpassword"style="width: 200px;
+                  display: inline-block;
+                  text-align: left;
+                  ">Confirm Password</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  id="cpassword"
+                  name="password2"
+                  placeholder="Confirm password"
+                  style="width: 170px;"
+                />
+              </div>
+              <!-- Department -->
+              <div class="form-group form-inline">
+                  <label for="phonenumber"style="width: 200px;
+                  display: inline-block;
+                  text-align: left;
+                  ">Phone Number</label>
+                
+                <input
+                  class="form-control"
+                  
+                  type="text"
+                  placeholder="phonenumber"
+                  id="phonenumber"
+                  name="phonenumber"
+                  style="width: 170px;"
+                />
+              </div> 
+              <!-- emailid -->
+              <div class="form-group form-inline">
+                  <label for="emailid"style="width: 200px;
+                  display: inline-block;
+                  text-align: left;
+                  ">Email Id</label>
+                
+                <input
+                  class="form-control"
+                  
+                  type="text"
+                  placeholder="emailid"
+                  id="emailid"
+                  name="emailid"
+                  style="width: 170px;"
+                />
+              </div> 
+              <!-- hostel -->
+              <div class="form-group form-inline">
+                  <label for="hostel"style="width: 200px;
+                  display: inline-block;
+                  text-align: left;
+                  ">Office</label>
+                <!-- <label for="hostel">Hostel</label> -->
+                <input
+                  class="form-control"
+                  type="text"
+                  name="hostel"
+                  id="hostel"
+                  placeholder="Hostel"
+                  style="width: 170px;"
+                />
+              </div>
+              <!-- image -->
+              <div class="form-group form-inline">
+                  <label for="img"style="width: 200px;
+                  display: inline-block;
+                  text-align: left;
+                  ">Image Url</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="img"
+                  placeholder="img url"
+                  name="image"
+                  style="width: 170px;"
+                />
+              </div>
+
+              <div class="form-group">
+                <button
+                  type="submit"
+                  class="btn btn-lg btn-primary btn-default btn-block"
+                  style=" color:#fff;margin-top:40px; width: 200px; margin-left: 100px;"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- name -->
+        </form>
+
+        <a href="/" style="margin-left:35px;">Back</a>
+      </div>
+    </div>
+  </div>
+  <% include ./partial/footer %>
+</div>

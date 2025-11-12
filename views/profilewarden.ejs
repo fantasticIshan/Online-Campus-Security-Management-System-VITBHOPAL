@@ -1,0 +1,19 @@
+<% include ./partial/header %> <% include ./partial/wardenfunction%>
+
+
+<div class="col-sm-6" style="    flex: 0 0 50%;
+max-width: 50%;
+margin-left: 431px;
+margin-top: -375px;  text-align: -webkit-center;">
+      <div class="thumbnail">
+        <img style="height:150px;width:150px;border-radius: 100%" src="<%=warden.image%>" />
+        <h1><strong><%=warden.name%> (<%=warden.username%>)</strong></h1>
+        <h3><strong>Security Manager</strong></h3>
+        <h4><%=warden.phonenumber%>, <%=warden.emailid%> </h4>
+      </div>
+      <a class="btn btn-warning" href="/warden/<%=warden._id%>/edit">Edit</a>
+    </div>
+  </div>
+</div>
+
+<% include ./partial/footer %>

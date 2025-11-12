@@ -1,0 +1,20 @@
+<% include ./partial/header %> <% include ./partial/studfunction %>
+
+  
+    <div class="col-sm-6" style="    flex: 0 0 50%;
+    max-width: 50%;
+    margin-left: 431px;
+    margin-top: -375px; text-align: -webkit-center;">
+      <div class="thumbnail">
+        <img  style="height:150px;width:150px;border-radius: 100%" src="<%=student.image%>" />
+        <h1><%=student.name%> (<%=student.username%>)</h1>
+        <h4><%=student.phonenumber%></h4>
+        <h4><%=student.emailid%></h4>
+        <h4><%=student.hostel%> Guard</h4>
+      </div>
+      <a class="btn btn-warning" href="/student/<%=student._id%>/edit">Edit</a>
+    </div>
+  </div>
+</div>
+
+<% include ./partial/footer %>
